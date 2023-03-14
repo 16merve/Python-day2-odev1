@@ -1,0 +1,43 @@
+ogrenciler = ["Ali Vural","Gamze Gül","Ahmet Sandık"]
+
+#Aldığı isim soy isim ile listeye öğrenci ekleme
+ogrenci_ekleme=input("Lütfen öğrenci adı ve soyadını yazınız:")
+ogrenciler.append(ogrenci_ekleme)
+print("Öğrenci listeye eklendi.")
+print(ogrenciler)
+
+#Aldığı isim soy isim ile eşleşen değeri listeden kaldırma
+ogrenci_silme=input("Lütfen silmek istediğiniz öğrenci adını ve soyadını yazınız:")
+for i in range(len(ogrenciler)):
+     if(ogrenciler[i]==ogrenci_silme):
+        ogrenciler.pop(i)
+        print("Öğrenci silindi.")
+        break
+print(ogrenciler)
+
+#Listedeki tüm öğrencileri tek tek ekrana yazdırma
+for i in range(len(ogrenciler)):
+    print(ogrenciler[i])
+    
+#Öğrencinin numarasını öğrenme
+ogrenci=input("Numarasını öğrenmek istediğiniz öğrencinin ad ve soyadını yazınız.")
+for i in range(len(ogrenciler)):
+    if(ogrenci==ogrenciler[i]):
+        print("Öğrencinin numarası:" +str(i))
+
+#Listeden birden fazla öğrenci silme
+sayiadeti=input("Kaç öğrenci silmek istersiniz?")
+i=0
+while i<int(sayiadeti):
+    ogrenciler.remove(ogrenciler[i])
+    i+=1
+print(ogrenciler)
+
+#Listeye birden fazla öğrenci ekleme
+sayiadeti=input("Kaç öğrenci eklemek istersiniz?")
+i=0
+while i<int(sayiadeti):
+    ogrenciler_ekle=input("Arada bir boşluk bırakarak ad soyad giriniz:")
+    ogrenciler.append(ogrenciler_ekle)
+    i+=1
+print(ogrenciler)
